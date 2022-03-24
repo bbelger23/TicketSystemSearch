@@ -29,6 +29,7 @@ namespace TicketSystemSearch
                 Console.WriteLine("Select Option");
                 Console.WriteLine("1. Add Tickets");
                 Console.WriteLine("2. Display Tickets");
+                Console.WriteLine("3. Search Tickets");
                 Console.WriteLine("Press any key to quit");
 
                 option = Console.ReadLine();
@@ -223,8 +224,11 @@ namespace TicketSystemSearch
                         }
                     } while (displayChoice == "1" || displayChoice == "2" || displayChoice == "3");
 
+                } else if (option == "3")
+                {
+                    
                 }
-            } while (option == "1" || option == "2"); 
+            } while (option == "1" || option == "2" || option == "3"); 
 
             logger.Info("Program Ended");    
         }
