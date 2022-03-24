@@ -2,6 +2,7 @@
 using NLog.Web;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TicketSystemSearch
 {
@@ -23,6 +24,8 @@ namespace TicketSystemSearch
             string option = "";
             string addChoice = "";
             string displayChoice = "";
+            string searchChoice = "";
+            string find = "";
 
             // user options
             do{
@@ -226,7 +229,44 @@ namespace TicketSystemSearch
 
                 } else if (option == "3")
                 {
-                    
+                    Console.WriteLine("Select Choice");
+                    Console.WriteLine("Search by status");
+                    Console.WriteLine("Search by priority");
+                    Console.WriteLine("Search by submitter");
+                    Console.WriteLine("Press any key to return to Select Option");
+
+                    searchChoice = Console.ReadLine();
+
+                    if (searchChoice == "1")
+                    {
+                        // ask user the status of ticket they want found
+                        Console.WriteLine("Enter status of ticket you want to find");
+
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        find = Console.ReadLine();
+
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    if (searchChoice == "2")
+                    {
+                        // ask user the priority of ticket they want found
+                        Console.WriteLine("Enter priority of ticket you want to find");
+
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        find = Console.ReadLine();
+
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    if (searchChoice == "3")
+                    {
+                        // ask user the submitter they want to find
+                        Console.WriteLine("Enter submitter of ticket you want to find");
+
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        find = Console.ReadLine();
+
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
                 }
             } while (option == "1" || option == "2" || option == "3"); 
 
