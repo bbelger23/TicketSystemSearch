@@ -1,0 +1,14 @@
+2022-03-24 19:20:02.7979|INFO|TicketSystemSearch.Program|Program Started
+2022-03-24 19:20:11.4570|INFO|TicketSystemSearch.Program|Program Ended
+2022-03-24 19:20:37.3053|INFO|TicketSystemSearch.Program|Program Started
+2022-03-24 19:21:03.4723|INFO|TicketSystemSearch.Program|Program Ended
+2022-03-24 19:43:44.4250|INFO|TicketSystemSearch.Program|Program Started
+2022-03-24 19:44:48.0368|INFO|TicketSystemSearch.Program|Program Ended
+2022-03-24 19:45:53.0892|INFO|TicketSystemSearch.Program|Program Started
+2022-03-24 19:46:04.4752|INFO|TicketSystemSearch.Program|Program Ended
+2022-03-24 19:47:13.2314|INFO|TicketSystemSearch.Program|Program Started
+2022-03-24 19:47:34.5494|INFO|TicketSystemSearch.Program|Program Ended
+2022-03-24 19:51:12.1269|INFO|TicketSystemSearch.Program|Program Started
+2022-03-24 19:51:27.0123|INFO|TicketSystemSearch.Program|Program Ended
+2022-03-24 19:55:24.2467|INFO|TicketSystemSearch.Program|Program Started
+2022-03-24 19:55:34.9452|INFO|TicketSystemSearch.Program|Program Ended

@@ -230,9 +230,9 @@ namespace TicketSystemSearch
                 } else if (option == "3")
                 {
                     Console.WriteLine("Select Choice");
-                    Console.WriteLine("Search by status");
-                    Console.WriteLine("Search by priority");
-                    Console.WriteLine("Search by submitter");
+                    Console.WriteLine("1. Search by status");
+                    Console.WriteLine("2. Search by priority");
+                    Console.WriteLine("3. Search by submitter");
                     Console.WriteLine("Press any key to return to Select Option");
 
                     searchChoice = Console.ReadLine();
@@ -241,9 +241,32 @@ namespace TicketSystemSearch
                     {
                         // ask user the status of ticket they want found
                         Console.WriteLine("Enter status of ticket you want to find");
+                        find = Console.ReadLine();
 
                         Console.ForegroundColor = ConsoleColor.Green;
-                        find = Console.ReadLine();
+                        
+                        var findDefect = defectFile.Defects.Where(t => t.status.Contains(find));
+
+                        foreach(Defect t in findDefect)
+                        {
+                            Console.WriteLine($" {t.status}");
+                        }
+                        
+                        var findEnhance = enhanceFile.Enhancements.Where(t => t.status.Contains(find));
+
+                        foreach(Enhancement t in findEnhance)
+                        {
+                            Console.WriteLine($" {t.status}");
+                        }
+
+                        var findTask = taskFile.Tasks.Where(t => t.status.Contains(find));
+
+                        foreach(Task t in findTask)
+                        {
+                            Console.WriteLine($" {t.status}");
+                        }
+
+                        Console.WriteLine($"There are {findDefect.Count() + findEnhance.Count() + findTask.Count()} {find} tickets found");
 
                         Console.ForegroundColor = ConsoleColor.White;
                     }
@@ -251,9 +274,32 @@ namespace TicketSystemSearch
                     {
                         // ask user the priority of ticket they want found
                         Console.WriteLine("Enter priority of ticket you want to find");
+                        find = Console.ReadLine();
 
                         Console.ForegroundColor = ConsoleColor.Green;
-                        find = Console.ReadLine();
+                        
+                        var findDefect = defectFile.Defects.Where(t => t.priority.Contains(find));
+
+                        foreach(Defect t in findDefect)
+                        {
+                            Console.WriteLine($" {t.priority}");
+                        }
+                        
+                        var findEnhance = enhanceFile.Enhancements.Where(t => t.priority.Contains(find));
+
+                        foreach(Enhancement t in findEnhance)
+                        {
+                            Console.WriteLine($" {t.priority}");
+                        }
+
+                        var findTask = taskFile.Tasks.Where(t => t.priority.Contains(find));
+
+                        foreach(Task t in findTask)
+                        {
+                            Console.WriteLine($" {t.priority}");
+                        }
+
+                        Console.WriteLine($"There are {findDefect.Count() + findEnhance.Count() + findTask.Count()} {find} priority tickets found");
 
                         Console.ForegroundColor = ConsoleColor.White;
                     }
@@ -261,9 +307,32 @@ namespace TicketSystemSearch
                     {
                         // ask user the submitter they want to find
                         Console.WriteLine("Enter submitter of ticket you want to find");
+                        find = Console.ReadLine();
 
                         Console.ForegroundColor = ConsoleColor.Green;
-                        find = Console.ReadLine();
+                        
+                        var findDefect = defectFile.Defects.Where(t => t.submit.Contains(find));
+
+                        foreach(Defect t in findDefect)
+                        {
+                            Console.WriteLine($" {t.submit}");
+                        }
+                        
+                        var findEnhance = enhanceFile.Enhancements.Where(t => t.submit.Contains(find));
+
+                        foreach(Enhancement t in findEnhance)
+                        {
+                            Console.WriteLine($" {t.submit}");
+                        }
+
+                        var findTask = taskFile.Tasks.Where(t => t.submit.Contains(find));
+
+                        foreach(Task t in findTask)
+                        {
+                            Console.WriteLine($" {t.submit}");
+                        }
+
+                        Console.WriteLine($"There are {findDefect.Count() + findEnhance.Count() + findTask.Count()} tickets that {find} submitted");
 
                         Console.ForegroundColor = ConsoleColor.White;
                     }
